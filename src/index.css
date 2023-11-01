@@ -1,8 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+
+body{
+   font-family: "Poppins", sans-serif; 
+}
+
+html, body{
+    scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.section {
+    @apply container mx-auto pt-[2rem] lg:px-8 px-4
+  }
+
+
+/* @layer base {
   @font-face {
     font-family: "Poppins";
     src: url(./Fonts/Poppins-Regular.ttf);
@@ -13,13 +30,11 @@
   img {
     width: 100%;
   }
-  .section {
-    @apply container mx-auto pt-[8rem] lg:px-8 px-4
-  }
+  
   .btn {
     @apply rounded-t-[1rem] rounded-bl-[1rem] bg-black p-4 flex items-center gap-4 text-white text-[0.85rem] 
   }
-}
+} */
 
 /* @layer base {
   body {

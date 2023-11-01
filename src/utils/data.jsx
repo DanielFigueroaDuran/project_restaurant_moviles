@@ -77,6 +77,25 @@ export const menus = [
     },
 ];
 
+export const categories = [
+    {
+        id: 1,
+        name: "Chicken",
+        urlParamName: "chicken",
+    },
+    {
+        id: 2,
+        name: "Curry",
+        urlParamName: "curry",
+    },
+    {
+        id: 3,
+        name: "Rice",
+        urlParamName: "rice",
+    },
+
+]
+
 export const footerSocials = [<BsFacebook />, <BsInstagram />, <BsTwitter />];
 export const footerContacts = [
     {

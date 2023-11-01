@@ -2,16 +2,19 @@
 //import Contact from '../landingpage/Contact';
 //import Footer from '../landingpage/Footer';
 //import Home from '../landingpage/Home';
-import Menu from '../landingpage/Menu';
-import NavIcon from '../landingpage/NavIcon';
+//import Menu from '../landingpage/Menu';
+//import NavIcon from '../landingpage/NavIcon';
+
+import ButtonGroup from "../ButtonGroup"
 
 const HomePage = () => {
     return (
         <div className='font-poppins bg-back'>
-            <NavIcon />
+            <ButtonGroup />
+            {/* <NavIcon /> */}
             {/* <Home /> */}
             {/* <Abaut /> */}
-            <Menu />
+            {/* <Menu /> */}
             {/* <Contact /> */}
             {/* <Footer /> */}
 
