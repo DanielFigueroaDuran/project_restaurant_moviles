@@ -1,11 +1,13 @@
 import { BiMap } from "react-icons/bi";
-import { CiBurger } from "react-icons/ci";
+//import { CiBurger } from "react-icons/ci";
 import { GiBowlOfRice, GiCakeSlice } from "react-icons/gi";
-import { FaIceCream } from "react-icons/fa";
-import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
+//import { FaIceCream } from "react-icons/fa";
+//import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
 import { AiFillHome } from "react-icons/ai";
-import { MdExplore, MdContactPage } from "react-icons/md";
+import { MdExplore, MdContactPage, MdOutlineRestaurantMenu } from "react-icons/md";
+import { FaGlassWater } from "react-icons/fa6";
+import { CgMenuHotdog } from "react-icons/cg";
 
 import recipe1 from "../assets/menu/patacon.png";
 import recipe2 from "../assets/menu/cachapa1.png";
@@ -19,12 +21,12 @@ import payment2 from "../assets/icons/payment2.png";
 import payment3 from "../assets/icons/payment3.png";
 import payment4 from "../assets/icons/payment4.png";
 
-export const heroIcons = [
-    <CiBurger />,
-    <FaIceCream />,
-    <GiCakeSlice />,
-    <GiBowlOfRice />,
-];
+// export const heroIcons = [
+//     <CiBurger />,
+//     <FaIceCream />,
+//     <GiCakeSlice />,
+//     <GiBowlOfRice />,
+// ];
 
 export const menus = [
     {
@@ -38,7 +40,7 @@ export const menus = [
     {
         id: 2,
         image: recipe2,
-        title: "Cachapa con Cochino Frito",
+        title: "Cachapa con Cerdo",
         ingredients: "Tortilla de maíz Tierno y dulce hecha a la plancha con queso de mano (Queso fresco artesanal)",
         price: 20,
         quantity: 1
@@ -80,23 +82,32 @@ export const menus = [
 export const categories = [
     {
         id: 1,
-        name: "Chicken",
-        urlParamName: "chicken",
+        name: "Menú",
+        urlParamName: "menu",
+        logo: <MdOutlineRestaurantMenu />,
     },
     {
         id: 2,
-        name: "Curry",
-        urlParamName: "curry",
+        name: "Arepas",
+        urlParamName: "arepa",
+        logo: <CgMenuHotdog />,
     },
     {
         id: 3,
-        name: "Rice",
-        urlParamName: "rice",
+        name: "Bebidas",
+        urlParamName: "bebidas",
+        logo: <FaGlassWater />,
+    },
+    {
+        id: 4,
+        name: "Postre",
+        urlParamName: "postre",
+        logo: <GiCakeSlice />,
     },
 
 ]
 
-export const footerSocials = [<BsFacebook />, <BsInstagram />, <BsTwitter />];
+//export const footerSocials = [<BsFacebook />, <BsInstagram />, <BsTwitter />];
 export const footerContacts = [
     {
         id: 1,

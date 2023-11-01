@@ -2,7 +2,7 @@ import { payements } from "../utils/data";
 
 const Copyright = () => {
     return (
-        <div className="flex flex-wrap  sm:justify-center lg:justify-between gap-4  p-4">
+        <div className="flex flex-wrap bg-black text-white sm:justify-center lg:justify-between gap-4  p-4">
             <div className="flex flex-col justify-center items-center gap-2">
                 <div>
                     Copyright &#169; <span className='font-bold '></span>Todos los derechos merecidos.
