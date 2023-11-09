@@ -1,27 +1,23 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { categories } from "../utils/data";
+import { RxArrowLeft } from "react-icons/rx";
 import Menu from "./landingpage/Menu";
-import Arepa from "./landingpage/Arepa";
 import Bebidas from "./landingpage/Bebidas";
 import Postre from "./landingpage/Postre";
-//import { IoFastFood } from "react-icons/io5";
+import MenuCart from "./pages/MenuCart";
+import { Link } from "react-router-dom";
+import { RestaurantContext } from "./context/Context";
 
 const ButtonGroup = () => {
-    const [filter, setFilter] = useState("menu");
-    console.log(filter)
+    const { filter, setFilter } = useContext(RestaurantContext);
+    // const [filter, setFilter] = useState("menu");
+    // console.log(filter)
 
 
     return (
-        <section className="w-full my-6" id="menu">
+        <section className="w-full mt-24">
             <div className="w-full flex flex-col items-center justify-center">
-
-                <p className="text-sm text-center p-3 font-semibold capitalize"
-                >
-                    te transportará a un mundo de
-                    sabores y sensaciones.
-                </p>
-
-                <div className="w-full flex items-center justify-center gap-8 py-6  px-1">
+                <div className="w-full flex items-center justify-center gap-8 mt-14 py-6 px-3  bg-bgBtnGroup bg-cover bg-center fixed top-0 left-0 pt-10 z-10">
                     {categories &&
                         categories.map((category) => (
                             <div
@@ -44,13 +40,6 @@ const ButtonGroup = () => {
                                         } group-hover:text-textColor text-lg`}>
                                         {category.logo}
                                     </div>
-
-                                    {/* <IoFastFood
-                                        className={`${filter === category.urlParamName
-                                            ? "text-textColor"
-                                            : "text-white"
-                                            } group-hover:text-textColor text-lg`}
-                                    /> */}
                                 </div>
                                 <p
                                     className={`text-sm ${filter === category.urlParamName
@@ -67,12 +56,12 @@ const ButtonGroup = () => {
                 <div>
                     {filter === "menu"
                         ? <Menu />
-                        : filter === "arepa"
-                            ? <Arepa />
-                            : filter === "bebidas"
-                                ? <Bebidas />
-                                : filter === "postre"
-                                    ? <Postre />
+                        : filter === "bebidas"
+                            ? <Bebidas />
+                            : filter === "postre"
+                                ? <Postre />
+                                : filter === "pedidos"
+                                    ? <MenuCart />
                                     : ''
                     }
                 </div>

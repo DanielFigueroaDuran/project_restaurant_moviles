@@ -3,7 +3,8 @@ import HomePage from "./components/pages/HomePage";
 import './App.css'
 import MenuCart from './components/pages/MenuCart';
 import Navbar from './components/Navbar';
-import Copyright from './components/Copyright';
+import Checkout from './components/pages/Checkout';
+import Success from './components/pages/Success';
 
 function App() {
 
@@ -12,9 +13,10 @@ function App() {
             <Navbar />
             <Routes>
                 <Route path='/' element={<HomePage />} />
-                <Route path='/menu' element={<MenuCart />} />
+                <Route path='/menuCart' element={<MenuCart />} />
+                <Route path='/checkout' element={<Checkout />} />
+                <Route path='/success' element={<Success />} />
             </Routes>
-            <Copyright />
         </BrowserRouter>
     )
 }

@@ -5,7 +5,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
    theme: {
-    extend: {
+       extend: {
+         fontFamily: {
+             poppins: "Poppins",
+    },
       width: {
         150: "150px",
         190: "190px",
@@ -58,6 +61,11 @@ export default {
         cartBg: "#282a2c",
         cartItem: "#2e3033",
         cartTotal: "#343739",
+           },
+      backgroundImage: {
+          bgLogo: "url('assets/logo/logoDaniel2.jpg')",
+          bgBtnGroup: "url('assets/bg/bg.png')",
+
       },
     },
   },

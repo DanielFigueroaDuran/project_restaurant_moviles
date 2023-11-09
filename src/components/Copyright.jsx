@@ -1,4 +1,4 @@
-import { payements } from "../utils/data";
+//import { payements } from "../utils/data";
 
 const Copyright = () => {
     return (
@@ -7,7 +7,7 @@ const Copyright = () => {
                 <div>
                     Copyright &#169; <span className='font-bold '></span>Todos los derechos merecidos.
                 </div>
-                <div className="flex gap-2">
+                {/* <div className="flex gap-2">
                     {payements?.map((payement, i) => {
                         return (
                             <div key={i}>
@@ -15,7 +15,7 @@ const Copyright = () => {
                             </div>
                         );
                     })}
-                </div>
+                </div> */}
             </div>
         </div>
     )

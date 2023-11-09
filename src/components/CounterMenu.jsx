@@ -1,40 +1,43 @@
-import { useContext, useState, } from 'react'
+import { useContext, useEffect } from 'react'
 import { RestaurantContext } from './context/Context';
-import minus from "../assets/icons/minus.png";
-import plus from "../assets/icons/plus.png";
-
+import { HiMiniPlusSmall, HiMiniMinusSmall } from "react-icons/hi2";
 
 const CounterMenu = ({ menu, quantity }) => {
     //const { quantity } = menu;
-    const { cart, setCart, handleAddToCart } = useContext(RestaurantContext);
+    const { handleAddToCart, handleClicksubtract } = useContext(RestaurantContext);
+
+    // useEffect(() => {
+    //     setMenuQuantityItem(quantity);
+    // }, []);
+
     //console.log(menu.quantity);
 
-    const handleClicksubtract = (menu) => {
-        const menuRepeat = cart.find((item) => item.id === menu.id);
+    // const handleClicksubtract = (menu) => {
+    //     const menuRepeat = cart.find((item) => item.id === menu.id);
 
-        menuRepeat.quantity !== 1 &&
-            setCart(cart.map((item) => item.id === menu.id
-                ? { ...menu, quantity: menuRepeat.quantity - 1 }
-                : item
-            ));
-    };
+    //     menuRepeat.quantity !== 1 &&
+    //         setCart(cart.map((item) => item.id === menu.id
+    //             ? { ...menu, quantity: menuRepeat.quantity - 1 }
+    //             : item
+    //         ));
+    // };
 
 
     return (
-        <div className="mt-[-40px] flex items-center gap-3 bg-white border rounded-l-[25px] rounded-r-[25px]  p-1">
+        <div className="flex items-center gap-2 ">
             <button
-                className='w-6 h-6'
+                className='w-6 h-6 border border-[white]'
                 onClick={() => handleClicksubtract(menu)}>
-                <img src={minus} alt="minus" />
+                <HiMiniMinusSmall className='bg-black text-white rounded-full w-6 h-6' />
             </button>
 
-            <p className='flex items-center justify-center w-6 h-6  bg-[#2a5b451a] text-[0.85rem]  rounded-[200px] '>{quantity}</p>
+            <p className='flex items-center justify-center w-6 h-6 text-[0.85rem]  rounded-[200px] '>{quantity}</p>
 
             <button
                 className='w-6 h-6'
                 onClick={() => handleAddToCart(menu)}
             >
-                <img src={plus} alt="plus" />
+                <HiMiniPlusSmall className='bg-black text-white rounded-full w-6 h-6' />
             </button>
         </div>
     )
