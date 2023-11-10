@@ -1,12 +1,13 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import Button from '../Button';
 import { RestaurantContext } from '../context/Context';
-import { HiMiniPlusSmall, HiMiniMinusSmall } from "react-icons/hi2";
 
 const Menu = () => {
-    const { dishMenus, cart, total, handleAddToCart, handleClicksubtract } = useContext(RestaurantContext);
+    const { dishMenus, total, handleAddToCart } = useContext(RestaurantContext);
 
-    const quantity = cart?.map((item) => item.quantity)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="section mt-32">
@@ -22,34 +23,17 @@ const Menu = () => {
                                 className=" flex flex-col justify-between p-4 shadow-lg shadow-black hover:shadow transition-all duration-300 border border-black border-opacity-40 rounded-lg"
                                 key={id}
                             >
-                                <div className='flex self-end'>
-                                    ({quantity})
-                                </div>
-                                <div className='flex justify-center items-center gap-4 border border-[tomato]'>
 
-                                    <button
-                                        className='w-6 h-6 border border-[white]'
-                                        onClick={() => handleClicksubtract(menu)}>
-                                        <HiMiniMinusSmall className='bg-black text-white rounded-full w-6 h-6' />
-                                    </button>
-
+                                <div className='flex justify-center items-center gap-4'>
                                     <img
-                                        className='w-40 h-40 rounded-lg mb-4 bg-cover border border-[blue]'
+                                        className='w-40 h-40 rounded-lg mb-4 bg-cover'
                                         src={image}
                                         alt="imagenMenu"
                                     />
-
-                                    <button
-                                        className='w-6 h-6'
-                                        onClick={() => handleAddToCart(menu)}
-                                    >
-                                        <HiMiniPlusSmall className='bg-black text-white rounded-full w-6 h-6' />
-                                    </button>
-
                                 </div>
 
-                                <div className='flex items-center w-full justify-between mb-4 px-10'>
-                                    <div className="md:text-xl text-[1rem] font-semibold ">{title}</div>
+                                <div className='flex items-center w-full justify-between mb-4 px-4'>
+                                    <div className="flex justify-center  md:text-xl   font-semibold ">{title}</div>
                                     <span
                                         className='font-semibold'
                                     >

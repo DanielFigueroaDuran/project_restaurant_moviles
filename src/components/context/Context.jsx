@@ -9,8 +9,7 @@ const Context = ({ children }) => {
     const [dessert, setDessert] = useState([]);
     const [cart, setCart] = useState([]);
     const [filter, setFilter] = useState("menu");
-    //const [menuQuantityItem, setMenuQuantityItem] = useState(Number);
-    //console.log(menuQuantityItem)
+
     const menuQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
     const total = cart.reduce((acc, menu) => acc + menu.price * menu.quantity, 0)
     // const subtotal = total * 0.21;

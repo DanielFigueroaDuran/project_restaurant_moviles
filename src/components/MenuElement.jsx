@@ -7,8 +7,6 @@ import Button from './Button';
 const MenuElement = () => {
     const { cart, setCart, total } = useContext(RestaurantContext);
 
-
-
     const handleMenuDelete = (id) => {
         // buscame el id que el usuario esta seleccionando
         const menuId = cart.find((item) => item.id === id);
@@ -70,8 +68,6 @@ const MenuElement = () => {
                 </div>
             </div>
         </>
-
-
     )
 }
 

@@ -129,7 +129,7 @@ export const menus = [
     {
         id: 10,
         image: polloQueso,
-        title: "Arepa de Pollo y Queso",
+        title: "Arepa Pollo y Queso",
         ingredients: "Pollo Mechado con queso (Edam)",
         price: 10,
         quantity: 1
