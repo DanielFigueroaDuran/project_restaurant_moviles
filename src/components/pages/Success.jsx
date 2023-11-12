@@ -10,8 +10,6 @@ const Success = () => {
     return (
         <div className="w-screen h-screen  bg-[#fbf3eb]">
 
-
-
             <div className="flex flex-col ">
                 <Link
                     className="pl-4"
@@ -25,7 +23,7 @@ const Success = () => {
                     <h2 className="font-semibold text-[1.5rem] text-center mt-24">
                         Gracias por su pedido, estamos trabajando en ello.
                     </h2>
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="logo" />
                     <h3 className="font-semibold text-center">Agradecemos tu preferencia</h3>
                 </div>
             </div>
