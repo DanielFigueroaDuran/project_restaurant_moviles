@@ -1,14 +1,9 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { RestaurantContext } from './context/Context';
 import { HiMiniPlusSmall, HiMiniMinusSmall } from "react-icons/hi2";
 
 const CounterMenu = ({ menu, quantity }) => {
-    const { setNewMenu, setCardQuantity, handleAddToCart, handleClicksubtract } = useContext(RestaurantContext);
-
-    useEffect(() => {
-        setNewMenu(menu);
-        setCardQuantity(quantity);
-    }, []);
+    const { handleAddToCart, handleClicksubtract } = useContext(RestaurantContext);
 
     return (
         <div className="flex items-center gap-2 ">
