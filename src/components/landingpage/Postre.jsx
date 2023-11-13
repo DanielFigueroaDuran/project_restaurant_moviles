@@ -4,7 +4,7 @@ import Button from "../Button";
 
 
 const Postre = () => {
-    const { dessert, total, handleAddToCart } = useContext(RestaurantContext);
+    const { dessert, cart, total, handleAddToCart } = useContext(RestaurantContext);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -19,11 +19,18 @@ const Postre = () => {
                 <div className=" grid lg:grid-cols-3 md:grid-cols-2 gap-8 mb-8">
                     {dessert?.map((menu) => {
                         const { id, image, title, price } = menu;
+                        const newQuantity = cart.find((item) => item.id === menu.id);
                         return (
                             <div
                                 className=" flex flex-col justify-between p-4 shadow-lg shadow-black hover:shadow transition-all duration-300 border border-black border-opacity-40 rounded-lg"
                                 key={id}
                             >
+                                <div className='text-right'>
+                                    {newQuantity
+                                        ? `(${newQuantity.quantity})`
+                                        : ''
+                                    }
+                                </div>
                                 <div className='flex justify-center'>
                                     <img src={image} alt="imagenMenu"
                                         className='w-40 h-40 rounded-lg mb-4 bg-cover'
