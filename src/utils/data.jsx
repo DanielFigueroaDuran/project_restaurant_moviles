@@ -35,7 +35,7 @@ import malta from "../assets/bebidas/malta.png";
 import ArrozConCoco from "../assets/postres/arrozConCoco.png";
 import dulceLechoza from "../assets/postres/dulceLechoza.png";
 import quesillo from "../assets/postres/quesillo.png";
-import tequeños from "../assets/postres/tequeños.png";
+import golfeado from "../assets/postres/golfeado.png";
 import tortaPiña from "../assets/postres/tortaPiña.png";
 //import tortaTresLeche from "../assets/postres/tortaTresLeche.png";
 
@@ -222,8 +222,8 @@ export const desserts = [
     },
     {
         id: 22,
-        image: tequeños,
-        title: "Tequeños",
+        image: golfeado,
+        title: "Golfeado",
         price: 3.30,
         quantity: 1
     },
