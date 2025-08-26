@@ -70,7 +70,8 @@ const Menu = () => {
                 {total > 0
                     ?
                     <Link to="/menuCart"
-                        className='flex items-center justify-between w-full py-2 px-8 bg-black border-2 border-white '>
+                        className='flex items-center justify-between w-full py-2 px-8 
+                        bg-black hover:bg-[#515051] font-semibold'>
 
                         {/* <div className='flex items-center w-full justify-between pl-8 bg-black border-2 border-white '> */}
                         <p className='text-white'>Total</p>
