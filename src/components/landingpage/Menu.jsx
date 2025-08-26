@@ -79,8 +79,6 @@ const Menu = () => {
                         <p className='text-white'>
                             Pedido
                         </p>
-
-
                     </Link>
                     : ''
                 }
