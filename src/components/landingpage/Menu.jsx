@@ -1,6 +1,7 @@
 import { useContext, useEffect } from 'react'
 import Button from '../Button';
 import { RestaurantContext } from '../context/Context';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
     const { dishMenus, total, cart, handleAddToCart } = useContext(RestaurantContext);
@@ -22,7 +23,9 @@ const Menu = () => {
                         const newQuantity = cart.find((item) => item.id === menu.id);
                         return (
                             <div
-                                className=" flex flex-col justify-between p-4 shadow-lg shadow-black hover:shadow transition-all duration-300 border border-black border-opacity-40 rounded-lg"
+                                className=" flex flex-col justify-between p-4 hover:shadow-lg hover:shadow-black 
+                                transition-transform duration-300 hover:translate-y-[-2px] 
+                                hover:scale-[1.03] border border-black border-opacity-40 rounded-lg"
                                 key={id}
                             >
                                 <div className='text-right'>
@@ -63,18 +66,22 @@ const Menu = () => {
                     })}
                 </div>
             </div>
-            <div className="flex justify-center min-w-full fixed bottom-0 left-0 ">
+            <div className="flex justify-center min-w-full fixed bottom-0 left-0">
                 {total > 0
-                    ? <div className='flex items-center w-full justify-between pl-8 bg-black'>
+                    ?
+                    <Link to="/menuCart"
+                        className='flex items-center justify-between w-full py-2 px-8 bg-black border-2 border-white '>
+
+                        {/* <div className='flex items-center w-full justify-between pl-8 bg-black border-2 border-white '> */}
                         <p className='text-white'>Total</p>
                         <p className='text-white'>|</p>
                         <span className='text-white'>{total.toFixed(2).replace(/\./g, ',')} €</span>
-                        <Button
-                            route="/menuCart"
-                            text="Pedido"
-                            style="w-40"
-                        />
-                    </div>
+                        <p className='text-white'>
+                            Pedido
+                        </p>
+
+
+                    </Link>
                     : ''
                 }
             </div>

@@ -45,7 +45,23 @@ const Context = ({ children }) => {
     }, [])
 
     return (
-        <RestaurantContext.Provider value={{ dishMenus, setDishMenus, cart, setCart, total, drinks, setDrinks, dessert, setDessert, filter, setFilter, handleAddToCart, handleClicksubtract, menuQuantity }}>
+        <RestaurantContext.Provider value={
+            {
+                dishMenus,
+                setDishMenus,
+                cart,
+                setCart,
+                total,
+                drinks,
+                setDrinks,
+                dessert,
+                setDessert,
+                filter,
+                setFilter,
+                handleAddToCart,
+                handleClicksubtract,
+                menuQuantity
+            }}>
             {children}
         </RestaurantContext.Provider>
     )
