@@ -18,7 +18,7 @@ const MenuElement = () => {
     return (
         <div className='mt-16'>
             <div className="flex flex-col items-center gap-4 min-h-screen  w-[90vw]">
-                <div className="flex items-center justify-center gap-20 text-3xl text-center font-bold w-full">
+                <div className="flex items-center justify-center gap-20 text-3xl text-center border-2 border-red-600 font-bold w-full">
                     <h3>Pedido</h3>
                 </div>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 w-full lg:items-center">
