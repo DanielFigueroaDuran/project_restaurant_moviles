@@ -3,7 +3,7 @@ import { RestaurantContext } from "./context/Context";
 import { Link } from "react-router-dom";
 
 
-const BtnTotalPedir = ({ text, handleClick, quantity, label, route }) => {
+const BtnTotalPedir = ({ text, handleClick, quantity, label, route, style }) => {
       const { total } = useContext(RestaurantContext);
 
       return (
@@ -11,8 +11,8 @@ const BtnTotalPedir = ({ text, handleClick, quantity, label, route }) => {
                   {total > 0
                         ?
                         <Link to={route}
-                              className='flex items-center justify-between w-full py-2 px-8 
-                         bg-black hover:bg-[#515051] font-semibold rounded-md'>
+                              className={`flex items-center justify-between w-full py-2 px-8 
+                         bg-black hover:bg-[#515051] font-semibold rounded-md ${style}`}>
 
                               <p className='text-white'>{label}</p>
                               <p className='text-white'>|</p>

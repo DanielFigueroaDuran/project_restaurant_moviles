@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react"
 import { RestaurantContext } from "../context/Context";
 import Button from "../Button";
+import BtnTotalPedir from "../BtnTotalPedir";
 
 
 const Postre = () => {
@@ -60,19 +61,12 @@ const Postre = () => {
                 </div>
             </div>
             <div className="flex justify-center min-w-full fixed bottom-0 left-0 ">
-                {total > 0
-                    ? <div className='flex items-center w-full justify-between pl-8 bg-black'>
-                        <p className='text-white'>Total</p>
-                        <p className='text-white'>|</p>
-                        <span className='text-white'>{total.toFixed(2).replace(/\./g, ',')} €</span>
-                        <Button
-                            route="/menuCart"
-                            text="Pedido"
-                            style="w-40"
-                        />
-                    </div>
-                    : ''
-                }
+                <BtnTotalPedir
+                    label="Total"
+                    quantity={`${total.toFixed(2).replace(/\./g, ',')}`}
+                    text="Pedido"
+                    route="/menuCart"
+                />
             </div>
         </div>
     )

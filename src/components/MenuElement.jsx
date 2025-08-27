@@ -3,6 +3,7 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { RestaurantContext } from './context/Context';
 import CounterMenu from './CounterMenu';
 import Button from './Button';
+import BtnTotalPedir from './BtnTotalPedir';
 
 const MenuElement = () => {
     const { cart, setCart, total } = useContext(RestaurantContext);
@@ -58,13 +59,19 @@ const MenuElement = () => {
                         })
                     }
                 </div>
-                <div className='border-2 border-red-900'>
-                    <Button
+                <div className='flex justify-center min-w-full fixed bottom-0 left-0 '>
+                    <BtnTotalPedir
+                        label="Pedir"
+                        quantity={`${total.toFixed(2).replace(/\./g, ',')} €`}
+                        route="/checkout"
+                        style="w-[90%] h-12"
+                    />
+                    {/* <Button
                         text="Pedir  |"
                         route="/checkout"
                         label={`${total.toFixed(2).replace(/\./g, ',')} €`}
-                        style="w-[80%] h-12"
-                    />
+                        style="w-[90%] h-12"
+                    /> */}
                 </div>
             </div>
         </div>
