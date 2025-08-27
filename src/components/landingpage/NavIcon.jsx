@@ -1,6 +1,5 @@
-import { React, useState } from 'react'
+import { useState } from 'react'
 import { mainMenu } from "../../utils/data";
-import { Link } from 'react-router-dom';
 import { LuMenuSquare } from "react-icons/lu";
 
 const NavIcon = () => {

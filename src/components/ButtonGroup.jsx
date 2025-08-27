@@ -1,18 +1,13 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { categories } from "../utils/data";
-import { RxArrowLeft } from "react-icons/rx";
 import Menu from "./landingpage/Menu";
 import Bebidas from "./landingpage/Bebidas";
 import Postre from "./landingpage/Postre";
 import MenuCart from "./pages/MenuCart";
-import { Link } from "react-router-dom";
 import { RestaurantContext } from "./context/Context";
 
 const ButtonGroup = () => {
     const { filter, setFilter } = useContext(RestaurantContext);
-    // const [filter, setFilter] = useState("menu");
-    // console.log(filter)
-
 
     return (
         <section className="w-full mt-24">

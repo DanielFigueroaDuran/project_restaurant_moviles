@@ -24,10 +24,10 @@ const Context = ({ children }) => {
     };
 
     const handleAddToCart = (menu) => {
-        // verificamos si el usuario esta metiendo el estrictamente igual  menu  que el usuario quiere agregar 
+        // We check if the user is entering the exact same menu that the user wants to add.
         const menuRepeat = cart.find((item) => item.id === menu.id);
 
-        // de esta forma si el menu esta repetido se le suma uno
+        // We check if the menu is repeated and add one.
         if (menuRepeat) {
             setCart(cart.map((item) => item.id === menu.id
                 ? { ...menu, quantity: menuRepeat.quantity + 1 }

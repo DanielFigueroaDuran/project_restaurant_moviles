@@ -2,14 +2,13 @@ import { useContext } from 'react'
 import { RiDeleteBinLine } from "react-icons/ri";
 import { RestaurantContext } from './context/Context';
 import CounterMenu from './CounterMenu';
-import Button from './Button';
 import BtnTotalPedir from './BtnTotalPedir';
 
 const MenuElement = () => {
     const { cart, setCart, total } = useContext(RestaurantContext);
 
     const handleMenuDelete = (id) => {
-        // buscame el id que el usuario esta seleccionando
+        // find me the id that the user is selecting
         const menuId = cart.find((item) => item.id === id);
         const newCart = cart.filter((item) => item !== menuId);
 
@@ -19,7 +18,7 @@ const MenuElement = () => {
     return (
         <div className='mt-16'>
             <div className="flex flex-col items-center gap-4 min-h-screen  w-[90vw]">
-                <div className="flex items-center justify-center gap-20 text-3xl text-center border-2 border-red-600 font-bold w-full">
+                <div className="flex items-center justify-center gap-20 text-3xl text-center font-bold w-full">
                     <h3>Pedido</h3>
                 </div>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 w-full lg:items-center">
@@ -29,7 +28,10 @@ const MenuElement = () => {
 
                             return (
                                 <div
-                                    className="flex flex-col p-1 gap-4 shadow-lg shadow-black hover:shadow transition-all duration-300 border"
+                                    className="flex flex-col p-1 gap-4 
+                                     hover:shadow-lg hover:shadow-black 
+                                transition-transform duration-300 hover:translate-y-[-2px] 
+                                hover:scale-[1.03] border rounded-lg"
                                     key={id}
                                 >
                                     <div className='flex items-center gap-4 h-20'>
@@ -66,12 +68,6 @@ const MenuElement = () => {
                         route="/checkout"
                         style="w-[90%] h-12"
                     />
-                    {/* <Button
-                        text="Pedir  |"
-                        route="/checkout"
-                        label={`${total.toFixed(2).replace(/\./g, ',')} €`}
-                        style="w-[90%] h-12"
-                    /> */}
                 </div>
             </div>
         </div>

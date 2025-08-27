@@ -6,7 +6,6 @@ import BtnTotalPedir from '../BtnTotalPedir';
 const Menu = () => {
     const { dishMenus, total, cart, handleAddToCart } = useContext(RestaurantContext);
 
-    //console.log(newMenu)
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);

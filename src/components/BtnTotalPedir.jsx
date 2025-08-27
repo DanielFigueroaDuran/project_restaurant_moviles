@@ -2,8 +2,7 @@ import { useContext } from "react";
 import { RestaurantContext } from "./context/Context";
 import { Link } from "react-router-dom";
 
-
-const BtnTotalPedir = ({ text, handleClick, quantity, label, route, style }) => {
+const BtnTotalPedir = ({ text, quantity, label, route, style }) => {
       const { total } = useContext(RestaurantContext);
 
       return (

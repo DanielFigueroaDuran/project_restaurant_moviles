@@ -3,7 +3,6 @@ import { RestaurantContext } from "../context/Context";
 import Button from "../Button";
 import BtnTotalPedir from "../BtnTotalPedir";
 
-
 const Postre = () => {
     const { dessert, cart, total, handleAddToCart } = useContext(RestaurantContext);
 
