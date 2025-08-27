@@ -58,12 +58,14 @@ const MenuElement = () => {
                         })
                     }
                 </div>
-                <Button
-                    text="Pedir  |"
-                    route="/checkout"
-                    label={`${total.toFixed(2).replace(/\./g, ',')} €`}
-                    style="w-[80%] h-12"
-                />
+                <div className='border-2 border-red-900'>
+                    <Button
+                        text="Pedir  |"
+                        route="/checkout"
+                        label={`${total.toFixed(2).replace(/\./g, ',')} €`}
+                        style="w-[80%] h-12"
+                    />
+                </div>
             </div>
         </div>
     )

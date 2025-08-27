@@ -2,22 +2,23 @@ import { useContext } from "react";
 import { RestaurantContext } from "./context/Context";
 import { Link } from "react-router-dom";
 
-const BtnMenu = () => {
+
+const BtnTotalPedir = ({ text, handleClick, quantity, label, route }) => {
       const { total } = useContext(RestaurantContext);
 
       return (
             <>
                   {total > 0
                         ?
-                        <Link to="/menuCart"
+                        <Link to={route}
                               className='flex items-center justify-between w-full py-2 px-8 
-                        bg-black hover:bg-[#515051] font-semibold rounded-md'>
+                         bg-black hover:bg-[#515051] font-semibold rounded-md'>
 
-                              <p className='text-white'>Total</p>
+                              <p className='text-white'>{label}</p>
                               <p className='text-white'>|</p>
-                              <span className='text-white'>{total.toFixed(2).replace(/\./g, ',')} €</span>
+                              <span className='text-white'>{quantity} €</span>
                               <p className='text-white'>
-                                    Pedido
+                                    {text}
                               </p>
                         </Link>
                         : ''
@@ -26,4 +27,4 @@ const BtnMenu = () => {
       )
 }
 
-export default BtnMenu
+export default BtnTotalPedir

@@ -1,8 +1,7 @@
 import { useContext, useEffect } from 'react'
 import Button from '../Button';
 import { RestaurantContext } from '../context/Context';
-import { Link } from 'react-router-dom';
-import BtnMenu from '../BtnMenu';
+import BtnTotalPedir from '../BtnTotalPedir';
 
 const Menu = () => {
     const { dishMenus, total, cart, handleAddToCart } = useContext(RestaurantContext);
@@ -68,22 +67,12 @@ const Menu = () => {
                 </div>
             </div>
             <div className="flex justify-center min-w-full fixed bottom-0 left-0">
-                <BtnMenu />
-                {/* {total > 0
-                    ?
-                    <Link to="/menuCart"
-                        className='flex items-center justify-between w-full py-2 px-8 
-                        bg-black hover:bg-[#515051] font-semibold rounded-md'>
-
-                        <p className='text-white'>Total</p>
-                        <p className='text-white'>|</p>
-                        <span className='text-white'>{total.toFixed(2).replace(/\./g, ',')} €</span>
-                        <p className='text-white'>
-                            Pedido
-                        </p>
-                    </Link>
-                    : ''
-                } */}
+                <BtnTotalPedir
+                    label="Total"
+                    quantity={`${total.toFixed(2).replace(/\./g, ',')}`}
+                    text="Pedido"
+                    route="/menuCart"
+                />
             </div>
         </div>
     )
